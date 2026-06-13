@@ -44,21 +44,21 @@ const es = {
     titulo: 'Sobre mí',
     subtitulo: 'Trayectoria y compromiso',
     bio1:
-      'Con más de una década de trayectoria en el ejercicio del Derecho, ofrezco un servicio jurídico personalizado, riguroso y orientado a resultados. Mi práctica se fundamenta en la escucha activa, el análisis exhaustivo de cada caso y la defensa firme de los intereses de mis clientes.',
+      'Abogada con 5 años de experiencia en el asesoramiento y defensa jurídica de particulares y empresas. Mi forma de trabajar se basa en un trato cercano, una comunicación clara y la implicación personal en cada asunto.',
     bio2:
-      'Comprometida con la excelencia y la ética profesional, cada asunto recibe atención individualizada desde la primera consulta hasta la resolución definitiva.',
+      'Entiendo el Derecho desde una perspectiva práctica y resolutiva, buscando siempre la mejor estrategia para proteger los intereses de mis clientes con profesionalidad, transparencia y compromiso.',
     credenciales: [
       {
-        titulo: 'Licenciatura en Derecho',
-        detalle: 'Universidad Complutense de Madrid',
+        titulo: 'Grado en Derecho',
+        detalle: 'Universidad de Granada',
       },
       {
-        titulo: 'Máster en Asesoría Fiscal',
-        detalle: 'Instituto de Estudios Superiores',
+        titulo: 'Máster en Abogacía',
+        detalle: 'Universidad Villanueva',
       },
       {
         titulo: 'Colegio de Abogados de Madrid',
-        detalle: 'Colegiada nº 28.XXX',
+        detalle: 'Colegiada nº 139148',
       },
     ],
   },
@@ -81,8 +81,8 @@ const es = {
       errorReq: 'Por favor, complete los campos obligatorios.',
     },
     info: {
-      email: 'cristina@carmonamolino.com',
-      telefono: '+34 600 000 000',
+      email: 'cristinac@asesoresfc.com',
+      telefono: '+34 655 33 65 87',
       direccion: 'Madrid, España',
       horario: 'Lun – Vie: 9:00 – 19:00',
     },

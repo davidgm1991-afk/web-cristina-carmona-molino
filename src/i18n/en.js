@@ -44,21 +44,21 @@ const en = {
     titulo: 'About me',
     subtitulo: 'Background and commitment',
     bio1:
-      "With over a decade of legal practice, I offer a personalised, rigorous and results-oriented service. My work is built on active listening, thorough analysis of each case, and a firm defence of my clients\u2019 interests.",
+      'Lawyer with 5 years of experience providing legal advice and representation to individuals and businesses. My approach is based on building close client relationships, maintaining clear communication, and being personally committed to every case.',
     bio2:
-      "Committed to excellence and professional ethics, every matter receives individual attention from the first consultation to the final resolution.",
+      'I understand law from a practical and solution-oriented perspective, always seeking the best strategy to protect my clients interests with professionalism, transparency and commitment.',
     credenciales: [
       {
         titulo: 'Law Degree',
-        detalle: 'Universidad Complutense de Madrid',
+        detalle: 'University of Granada',
       },
       {
-        titulo: 'Master in Tax Advisory',
-        detalle: 'Instituto de Estudios Superiores',
+        titulo: 'Master\'s Degree in Legal Practice',
+        detalle: 'University Villanueva',
       },
       {
         titulo: 'Madrid Bar Association',
-        detalle: 'Member no. 28.XXX',
+        detalle: 'Member no. 139148',
       },
     ],
   },
@@ -81,8 +81,8 @@ const en = {
       errorReq: 'Please fill in all required fields.',
     },
     info: {
-      email: 'cristina@carmonamolino.com',
-      telefono: '+34 600 000 000',
+      email: 'cristinac@asesoresfc.com',
+      telefono: '+34 655 33 65 87',
       direccion: 'Madrid, Spain',
       horario: 'Mon – Fri: 9:00 – 19:00',
     },

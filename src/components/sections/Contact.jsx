@@ -137,7 +137,7 @@ export default function Contact() {
                   name="telefono"
                   value={form.telefono}
                   onChange={handleChange}
-                  placeholder="+34 600 000 000"
+                  placeholder="+34 655 33 65 87"
                   autoComplete="tel"
                   className={inputBase}
                 />
