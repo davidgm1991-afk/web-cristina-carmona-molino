@@ -3,6 +3,7 @@ import { motion, useInView } from 'framer-motion';
 import useLanguage from '../../hooks/useLanguage';
 import SectionHeader from '../ui/SectionHeader';
 import Button from '../ui/Button';
+import { WEB3FORMS_ACCESS_KEY } from '../../config/web3forms';
 
 /* ── Inline contact info icons ─────────────────────── */
 
@@ -63,22 +64,51 @@ export default function Contact() {
   const emptyForm = { nombre: '', email: '', telefono: '', area: '', mensaje: '' };
   const [form, setForm] = useState(emptyForm);
   const [status, setStatus] = useState(null); // null | 'sending' | 'success' | 'error'
+  const [errorMessage, setErrorMessage] = useState('');
 
   const handleChange = (e) =>
     setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+
     if (!form.nombre.trim() || !form.email.trim() || !form.mensaje.trim()) {
       setStatus('error');
+      setErrorMessage(t.contact.form.errorReq);
       return;
     }
+
     setStatus('sending');
-    // Simulated async — replace with real integration (e.g. EmailJS / Formspree)
-    setTimeout(() => {
-      setStatus('success');
-      setForm(emptyForm);
-    }, 1600);
+    setErrorMessage('');
+
+    try {
+      const res = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify({
+          access_key: WEB3FORMS_ACCESS_KEY,
+          subject: `Nueva consulta de ${form.nombre}`,
+          from_name: form.nombre,
+          email: form.email,
+          telefono: form.telefono || 'No proporcionado',
+          area: form.area || 'No especificado',
+          message: form.mensaje,
+        }),
+      });
+
+      const data = await res.json();
+
+      if (data.success) {
+        setStatus('success');
+        setForm(emptyForm);
+      } else {
+        throw new Error(data.message || 'Error desconocido');
+      }
+    } catch (error) {
+      console.error('Error al enviar el formulario:', error);
+      setStatus('error');
+      setErrorMessage('Error al enviar el mensaje. Por favor, intenta de nuevo o contacta directamente.');
+    }
   };
 
   const infoItems = [
@@ -194,7 +224,7 @@ export default function Contact() {
                 <p className="text-sm text-brand-silver">{t.contact.form.exito}</p>
               )}
               {status === 'error' && (
-                <p className="text-sm text-red-500">{t.contact.form.errorReq}</p>
+                <p className="text-sm text-red-500">{errorMessage || t.contact.form.errorReq}</p>
               )}
             </div>
           </motion.form>
