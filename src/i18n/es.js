@@ -6,7 +6,7 @@ const es = {
     consulta: 'Consulta',
   },
   hero: {
-    tagline: 'Derecho Civil & Fiscal',
+    tagline: 'Derecho Civil, Fiscal & Inmobiliario',
     headline1: 'Soluciones jurídicas',
     headline2: 'con precisión y rigor.',
     descripcion:
@@ -85,7 +85,7 @@ const es = {
       area: 'Área de consulta',
       mensaje: 'Mensaje *',
       enviar: 'Enviar consulta',
-      areaOpciones: ['Derecho Civil', 'Derecho Fiscal', 'Otra consulta'],
+      areaOpciones: ['Derecho Civil', 'Derecho Fiscal', 'Derecho Inmobiliario', 'Otra consulta'],
       enviando: 'Enviando...',
       exito:
         'Mensaje enviado correctamente. Me pondré en contacto con usted a la mayor brevedad.',

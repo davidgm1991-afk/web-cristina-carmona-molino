@@ -6,7 +6,7 @@ const en = {
     consulta: 'Book a call',
   },
   hero: {
-    tagline: 'Civil & Tax Law',
+    tagline: 'Civil, Tax & Real Estate Law',
     headline1: 'Legal solutions',
     headline2: 'with precision and rigour.',
     descripcion:
@@ -85,7 +85,7 @@ const en = {
       area: 'Area of enquiry',
       mensaje: 'Message *',
       enviar: 'Send message',
-      areaOpciones: ['Civil Law', 'Tax Law', 'Other enquiry'],
+      areaOpciones: ['Civil Law', 'Tax Law', 'Real Estate Law', 'Other enquiry'],
       enviando: 'Sending…',
       exito:
         'Message sent successfully. I will get back to you as soon as possible.',
