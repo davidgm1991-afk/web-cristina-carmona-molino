@@ -20,23 +20,34 @@ const es = {
     civil: {
       nombre: 'Derecho Civil',
       descripcion:
-        'Representación y asesoramiento en contratos, responsabilidad civil, sucesiones y derechos reales. Protejo sus intereses con rigor técnico y estrategia procesal.',
+        'Asesoramiento y defensa jurídica en conflictos civiles, tanto en vía extrajudicial como ante los Tribunales, con una estrategia adaptada a las circunstancias de cada asunto.',
       items: [
+        'Procedimientos judiciales y reclamaciones',
         'Contratos y obligaciones',
         'Herencias y sucesiones',
         'Responsabilidad civil',
-        'Derechos reales e inmobiliario',
       ],
     },
     fiscal: {
       nombre: 'Derecho Fiscal',
       descripcion:
-        'Planificación tributaria, defensa ante la Administración, inspecciones y recursos. Optimización legal de su carga fiscal con plenas garantías.',
+        'Asesoramiento fiscal a particulares, autónomos y profesionales internacionales, con especial atención a extranjeros que desarrollan su actividad o establecen su residencia en España. Gestión integral de sus obligaciones tributarias y planificación de su fiscalidad en España.',
       items: [
-        'Planificación tributaria',
-        'Recursos y reclamaciones',
-        'Inspecciones y procedimientos',
-        'Fiscalidad de empresa y persona física',
+        'Fiscalidad de extranjeros y nómadas digitales',
+        'Alta y gestión fiscal de autónomos en España',
+        'Residencia fiscal y fiscalidad internacional',
+        'Declaraciones tributarias y obligaciones fiscales',
+      ],
+    },
+    inmobiliario: {
+      nombre: 'Derecho Inmobiliario',
+      descripcion:
+        'Asesoramiento jurídico integral en operaciones y conflictos relacionados con bienes inmuebles. Acompaño al cliente desde la negociación y revisión documental hasta la formalización de la operación o, cuando sea necesario, su defensa judicial.',
+      items: [
+        'Compreventa de inmuebles',
+        'Extinción de condominio y copropiedad',
+        'Arrendamientos urbanos y rústicos',
+        'Conflictos y reclamaciones inmobiliarias',
       ],
     },
   },
@@ -83,7 +94,7 @@ const es = {
     info: {
       email: 'cristinac@asesoresfc.com',
       telefono: '+34 655 33 65 87',
-      direccion: 'Madrid, España',
+      direccion: 'Granada, España',
       horario: 'Lun – Vie: 9:00 – 19:00',
     },
   },

@@ -20,23 +20,34 @@ const en = {
     civil: {
       nombre: 'Civil Law',
       descripcion:
-        'Representation and counsel in contracts, civil liability, inheritance and property rights. I protect your interests with technical rigour and a clear procedural strategy.',
+        'Legal advice and representation in civil disputes, both out of court and before the Courts, with a strategy tailored to the specific circumstances of each case.',
       items: [
-        'Contracts & obligations',
-        'Inheritance & estates',
+        'Court proceedings and claims',
+        'Contracts and obligations',
+        'Inheritance and succession',
         'Civil liability',
-        'Property & real estate law',
       ],
     },
     fiscal: {
       nombre: 'Tax Law',
       descripcion:
-        'Tax planning, defence before the Tax Authority, audits and appeals. Legal optimisation of your tax burden with full legal guarantees.',
+        'Tax advice for individuals, self-employed professionals and international clients, with a particular focus on foreigners working or establishing their residence in Spain. Comprehensive management of Spanish tax obligations and international tax matters.',
       items: [
-        'Tax planning',
-        'Appeals & claims',
-        'Tax inspections & procedures',
-        'Corporate & personal taxation',
+        'Tax services for expats & digital nomads',
+        'Self-employed registration & tax compliance in Spain',
+        'Tax residency & international taxation',
+        'Tax returns & ongoing tax compliance',
+      ],
+    },
+    realEstate: {
+      nombre: 'Real Estate Law',
+      descripcion:
+        'Comprehensive legal advice in transactions and disputes related to real estate. I assist clients from negotiation and document review to the formalization of the transaction or, when necessary, its judicial defense.',
+      items: [
+        'Property purchase and sale',
+        'Termination of co-ownership and condominium',
+        'Urban and rural leases',
+        'Real estate disputes and claims',
       ],
     },
   },

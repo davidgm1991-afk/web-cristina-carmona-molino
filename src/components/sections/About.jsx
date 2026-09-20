@@ -23,10 +23,12 @@ export default function About() {
             className="relative"
           >
             {/* Photo frame */}
-            <div className="relative z-10 aspect-[4/5] w-full max-w-sm mx-auto lg:mx-0 bg-brand-platinum flex items-center justify-center">
-              <span className="text-[10px] uppercase tracking-[0.3em] text-brand-silver/60">
-                Fotografía
-              </span>
+            <div className="relative z-10 aspect-[4/5] w-full max-w-sm mx-auto lg:mx-0 overflow-hidden bg-brand-platinum">
+              <img
+                src="/imagen1.jpg"
+                alt="Cristina Carmona"
+                className="w-full h-full object-cover"
+              />
             </div>
             {/* Decorative offset border */}
             <div

@@ -44,6 +44,28 @@ function TaxIcon() {
   );
 }
 
+function RealEstateIcon() {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={1.25}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className="w-full h-full"
+    >
+      <path d="M3 21h18" />
+      <path d="M5 21V9l7-5 7 5v12" />
+      <path d="M9 21v-5h6v5" />
+      <path d="M8 12h2" />
+      <path d="M14 12h2" />
+      <path d="M8 9h2" />
+      <path d="M14 9h2" />
+    </svg>
+  );
+}
+
 /* ── Component ─────────────────────────────────────── */
 
 export default function Services() {
@@ -62,6 +84,12 @@ export default function Services() {
       description: t.services.fiscal.descripcion,
       items: t.services.fiscal.items,
     },
+    {
+      icon: <RealEstateIcon />,
+      title: t.services.inmobiliario.nombre,
+      description: t.services.inmobiliario.descripcion,
+      items: t.services.inmobiliario.items,
+    },
   ];
 
   return (
@@ -72,7 +100,7 @@ export default function Services() {
           title={t.services.titulo}
         />
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {services.map((service, i) => (
             <ServiceCard key={i} index={i} {...service} />
           ))}
