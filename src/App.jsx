@@ -1,3 +1,4 @@
+import { Analytics } from '@vercel/analytics/react';
 import { LanguageProvider } from './context/LanguageContext';
 import Navbar from './components/layout/Navbar';
 import Footer from './components/layout/Footer';
@@ -19,6 +20,7 @@ function App() {
         </main>
         <Footer />
       </div>
+      <Analytics />
     </LanguageProvider>
   );
 }
