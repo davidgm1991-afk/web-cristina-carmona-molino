@@ -39,7 +39,7 @@ const en = {
         'Tax returns & ongoing tax compliance',
       ],
     },
-    realEstate: {
+    inmobiliario: {
       nombre: 'Real Estate Law',
       descripcion:
         'Comprehensive legal advice in transactions and disputes related to real estate. I assist clients from negotiation and document review to the formalization of the transaction or, when necessary, its judicial defense.',
