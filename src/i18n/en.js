@@ -90,6 +90,20 @@ const en = {
       exito:
         'Message sent successfully. I will get back to you as soon as possible.',
       errorReq: 'Please fill in all required fields.',
+      placeholderNombre: 'Cristina García',
+      placeholderEmail: 'email@example.com',
+      placeholderMensaje: 'Please briefly describe your enquiry…',
+
+      confidencialidad: {
+        linea1: 'Confidentiality guaranteed',
+        linea2: 'with every enquiry.',
+      },
+
+      noProporcionado: 'Not provided',
+      noEspecificado: 'Not specified',
+      errorEnvio:
+        'Error sending your message. Please try again or contact us directly.',
+      errorDesconocido: 'Unknown error',
     },
     info: {
       email: 'cristinac@asesoresfc.com',

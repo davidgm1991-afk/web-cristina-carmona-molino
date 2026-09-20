@@ -90,8 +90,8 @@ export default function Contact() {
           subject: `Nueva consulta de ${form.nombre}`,
           from_name: form.nombre,
           email: form.email,
-          telefono: form.telefono || 'No proporcionado',
-          area: form.area || 'No especificado',
+          telefono: form.telefono || t.contact.form.noProporcionado,
+          area: form.area || t.contact.form.noEspecificado,
           message: form.mensaje,
         }),
       });
@@ -102,12 +102,12 @@ export default function Contact() {
         setStatus('success');
         setForm(emptyForm);
       } else {
-        throw new Error(data.message || 'Error desconocido');
+        throw new Error(data.message || t.contact.form.errorDesconocido);
       }
     } catch (error) {
       console.error('Error al enviar el formulario:', error);
       setStatus('error');
-      setErrorMessage('Error al enviar el mensaje. Por favor, intenta de nuevo o contacta directamente.');
+      setErrorMessage(t.contact.form.errorEnvio);
     }
   };
 
@@ -143,7 +143,7 @@ export default function Contact() {
                 name="nombre"
                 value={form.nombre}
                 onChange={handleChange}
-                placeholder="Cristina García"
+                placeholder={t.contact.form.placeholderNombre}
                 autoComplete="name"
                 className={inputBase}
               />
@@ -156,7 +156,7 @@ export default function Contact() {
                   name="email"
                   value={form.email}
                   onChange={handleChange}
-                  placeholder="correo@ejemplo.com"
+                  placeholder={t.contact.form.placeholderEmail}
                   autoComplete="email"
                   className={inputBase}
                 />
@@ -203,7 +203,7 @@ export default function Contact() {
                 name="mensaje"
                 value={form.mensaje}
                 onChange={handleChange}
-                placeholder="Describa brevemente su consulta…"
+                placeholder={t.contact.form.placeholderMensaje}
                 rows={5}
                 className={`${inputBase} resize-none`}
               />
@@ -260,9 +260,9 @@ export default function Contact() {
             {/* Tagline note */}
             <div className="mt-16 pt-10 border-t border-brand-border">
               <p className="text-[11px] uppercase tracking-[0.3em] text-brand-platinum leading-loose">
-                Confidencialidad garantizada
+                {t.contact.form.confidencialidad.linea1}
                 <br />
-                en cada consulta.
+                {t.contact.form.confidencialidad.linea2}
               </p>
             </div>
           </motion.div>

@@ -90,6 +90,20 @@ const es = {
       exito:
         'Mensaje enviado correctamente. Me pondré en contacto con usted a la mayor brevedad.',
       errorReq: 'Por favor, complete los campos obligatorios.',
+      placeholderNombre: 'Cristina García',
+      placeholderEmail: 'correo@ejemplo.com',
+      placeholderMensaje: 'Describa brevemente su consulta…',
+
+      confidencialidad: {
+        linea1: 'Confidencialidad garantizada',
+        linea2: 'en cada consulta.',
+      },
+
+      noProporcionado: 'No proporcionado',
+      noEspecificado: 'No especificado',
+      errorEnvio:
+        'Error al enviar el mensaje. Por favor, inténtalo de nuevo o contacta directamente.',
+      errorDesconocido: 'Error desconocido',
     },
     info: {
       email: 'cristinac@asesoresfc.com',
