@@ -42,9 +42,9 @@ const es = {
     inmobiliario: {
       nombre: 'Derecho Inmobiliario',
       descripcion:
-        'Asesoramiento jurídico integral en operaciones y conflictos relacionados con bienes inmuebles. Acompaño al cliente desde la negociación y revisión documental hasta la formalización de la operación o, cuando sea necesario, su defensa judicial.',
+        'Asesoramiento jurídico integral en operaciones y conflictos relacionados con bienes inmuebles. Acompañamiento al cliente desde la negociación y revisión documental hasta la formalización de la operación o, cuando sea necesario, su defensa judicial.',
       items: [
-        'Compreventa de inmuebles',
+        'Compraventa de inmuebles',
         'Extinción de condominio y copropiedad',
         'Arrendamientos urbanos y rústicos',
         'Conflictos y reclamaciones inmobiliarias',

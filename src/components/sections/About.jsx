@@ -25,7 +25,7 @@ export default function About() {
             {/* Photo frame */}
             <div className="relative z-10 aspect-[4/5] w-full max-w-sm mx-auto lg:mx-0 overflow-hidden bg-brand-platinum">
               <img
-                src="/imagen1.jpg"
+                src="/imagen3.jpg"
                 alt="Cristina Carmona"
                 className="w-full h-full object-cover"
               />
