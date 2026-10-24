@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import useLanguage from '../../hooks/useLanguage';
 import Button from '../ui/Button';
@@ -7,6 +7,7 @@ export default function Navbar() {
   const { t, lang, toggleLang } = useLanguage();
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const pendingMobileTarget = useRef(null);
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 24);
@@ -31,12 +32,20 @@ export default function Navbar() {
 
   const navigateFromMobileMenu = (event, href) => {
     event.preventDefault();
+    pendingMobileTarget.current = href.slice(1);
     window.history.pushState(null, '', href);
-    document.getElementById(href.slice(1))?.scrollIntoView({
+    setMenuOpen(false);
+  };
+
+  const completeMobileNavigation = () => {
+    const targetId = pendingMobileTarget.current;
+    pendingMobileTarget.current = null;
+    if (!targetId) return;
+
+    document.getElementById(targetId)?.scrollIntoView({
       behavior: 'smooth',
       block: 'start',
     });
-    setMenuOpen(false);
   };
 
   return (
@@ -131,7 +140,7 @@ export default function Navbar() {
       </nav>
 
       {/* ── Mobile dropdown menu ── */}
-      <AnimatePresence>
+      <AnimatePresence onExitComplete={completeMobileNavigation}>
         {menuOpen && (
           <motion.div
             initial={{ opacity: 0, height: 0 }}
