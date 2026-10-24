@@ -29,6 +29,16 @@ export default function Navbar() {
     { label: t.nav.contacto,  href: '#contacto' },
   ];
 
+  const navigateFromMobileMenu = (event, href) => {
+    event.preventDefault();
+    window.history.pushState(null, '', href);
+    document.getElementById(href.slice(1))?.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start',
+    });
+    setMenuOpen(false);
+  };
+
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-400 ${
@@ -135,7 +145,7 @@ export default function Navbar() {
                 <a
                   key={href}
                   href={href}
-                  onClick={() => setMenuOpen(false)}
+                  onClick={(event) => navigateFromMobileMenu(event, href)}
                   className="text-[11px] uppercase tracking-[0.22em] text-brand-silver hover:text-brand-black transition-colors duration-200 font-sans"
                 >
                   {label}
@@ -147,7 +157,7 @@ export default function Navbar() {
                   size="sm"
                   as="a"
                   href="#contacto"
-                  onClick={() => setMenuOpen(false)}
+                  onClick={(event) => navigateFromMobileMenu(event, '#contacto')}
                   className="self-start"
                 >
                   {t.nav.consulta}

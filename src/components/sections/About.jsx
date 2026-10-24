@@ -9,7 +9,7 @@ export default function About() {
   const inView = useInView(ref, { once: true, amount: 0.15 });
 
   return (
-    <section id="sobre-mi" className="py-28 bg-brand-offwhite overflow-hidden">
+    <section id="sobre-mi" className="scroll-mt-20 py-28 bg-brand-offwhite overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <div
           ref={ref}

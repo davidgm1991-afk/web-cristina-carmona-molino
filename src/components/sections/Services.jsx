@@ -93,7 +93,7 @@ export default function Services() {
   ];
 
   return (
-    <section id="servicios" className="py-28 bg-white">
+    <section id="servicios" className="scroll-mt-20 py-28 bg-white">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <SectionHeader
           overline={t.services.subtitulo}
